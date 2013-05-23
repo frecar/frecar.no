@@ -17,7 +17,7 @@ body {
     font-family: "Helvetica Neue Light", Georgia, Cambria, "Times New Roman", Times, serif;
     font-weight: 200;
     font-size: 20px;
-    background: #f0f0f0 url("/static/img/bg.png");
+    background: #f0f0f0 url("../img/bg.png");
 }
 
 h1 {

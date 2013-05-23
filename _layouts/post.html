@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>frecar.no</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/static/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="/static/css/pygments.css" rel="stylesheet" type="text/css" media="screen"/>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row-fluid">
+
+        <div class="span12">
+
+            <div class="span3" id="profile_info">
+                <div id="profile">
+                    <div><img src="/static/img/profile.png"></div>
+                    <div class="name">Fredrik Nygård Carlsen</div>
+                    <p>
+                        Computer Science Student <br>
+                        me@frecar.no
+                    </p>
+
+                </div>
+            </div>
+
+
+            <div class="span9" id="content">
+
+                <div class="post">
+
+                    <h1>{{ page.title }}</h1>
+
+                    <div class="info">
+                        Published {{ page.date | date_to_string }}
+                    </div>
+
+                    {{ content }}
+
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

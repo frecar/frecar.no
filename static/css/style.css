@@ -55,6 +55,10 @@ p {
     font-size: 12px;
 }
 
+#content img {
+    margin:10px;
+}
+
 .post {
     margin-bottom: 50px;
 }

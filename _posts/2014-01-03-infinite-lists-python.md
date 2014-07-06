@@ -15,7 +15,8 @@ def inf_list(start=0):
         x+=1
         yield x
 
-for x in inf_list:
+#Never ending loop..
+for x in inf_list():
     print x
 
 {% endhighlight %}

@@ -36,7 +36,7 @@ for x in l:
 for i in l:
     print i.n
 
-{% endfor %}
+{% endhighlight %}
 
 In this example, we do not rebind the x variable, we rebind the x.n variable, and therefore change the value of x.n, whereas the x continue to be the
 element in the list. We <i>mutate the x object</i>. The result is a list of the same objects, containing differents values for the n variable.

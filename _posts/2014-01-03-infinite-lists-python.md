@@ -58,20 +58,26 @@ def inf_list(start=0):
         x+=1
         yield x
 
-def elements(func, list, max_size):
+def filter_list(func, list, result_size=None):
     result = []
-    for x in filter(func, list):
-        if(len(result)>=max_size):
+    for x in list:
+        if result_size and len(result) >= result_size:
             break
-        result.append(x)
+        if func(x):
+            result.append(x)
     return result
 
-print elements(lambda x: x%3, inf_list(), 1000)
+#Get the 1000 first elements divisible by given integer
+print filter_list(lambda x: x % 1 == 0, inf_list(), 1000)
+print filter_list(lambda x: x % 2 == 0, inf_list(), 1000)
+print filter_list(lambda x: x % 3 == 0, inf_list(), 1000)
+print filter_list(lambda x: x % 4 == 0, inf_list(), 1000)
+print filter_list(lambda x: x % 150 == 0, inf_list(), 1000)
+
 
 {% endhighlight %}
 
 #### Use generators to calculate prime numbers
-
 
 {% highlight py %}
 
@@ -94,13 +100,6 @@ def filter_list(func, list, result_size=None):
         if func(x):
             result.append(x)
     return result
-
-#Get the 1000 first elements divisible by given integer
-print filter_list(lambda x: x % 1 == 0, inf_list(), 1000)
-print filter_list(lambda x: x % 2 == 0, inf_list(), 1000)
-print filter_list(lambda x: x % 3 == 0, inf_list(), 1000)
-print filter_list(lambda x: x % 4 == 0, inf_list(), 1000)
-print filter_list(lambda x: x % 150 == 0, inf_list(), 1000)
 
 
 #Simple prime number number checker, just for this example

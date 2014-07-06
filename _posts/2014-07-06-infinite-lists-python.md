@@ -2,9 +2,9 @@
 layout: post
 ---
 
-When you need to solve a problem and use lists of unknown size, you should use generators to not waste memory. You can easily generators to create infinite lists in Python.
+When you need to solve a problem and use lists of unknown size, you should use generators to not waste memory.
+You can easily make use of generators to create infinite lists in Python.
 
-This example will generate an infinite list for you.
 {% highlight py %}
 
 def inf_list(start=0):

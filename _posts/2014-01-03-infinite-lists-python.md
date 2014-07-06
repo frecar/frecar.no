@@ -3,9 +3,9 @@ layout: post
 ---
 
 If you don't know how large list you need, but don't want to create one giant list for the task, you can make use of generators.
-You can easily create a generator for a infite list.
+You can easily create a generator for a infinite list.
 
-This example will generate an infite list for you.
+This example will generate an infinite list for you.
 
 {% highlight py %}
 

@@ -48,3 +48,19 @@ for x in generator(0,10):
 
 {% endhighlight %}
 
+## The fibonacci sequence as a generator function.
+
+{% highlight py %}
+
+def fibonacci_sequence():
+    a = 0
+    b = 1
+
+    while True:
+        yield a
+        a, b = a + b, a
+
+for f in fibonacci_sequence():
+    print f
+
+{% endhighlight %}

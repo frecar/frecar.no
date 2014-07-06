@@ -48,7 +48,7 @@ print numbers_divisible_by_three
 
 ### More advanced usage
 
-Generators are powerful and you can use them anywhere you can pass an iterable. Say you want a more compact and general solution to the previous example.
+Generators are powerful and since they are iterators, we can create a more general solution to the previous example.
 
 {% highlight py %}
 
@@ -60,19 +60,13 @@ def inf_list(start=0):
 
 def elements(func, list, max_size):
     result = []
-
     for x in filter(func, list):
-
         if(len(result)>=max_size):
             break
-
         result.append(x)
-
-    return elements
-
+    return result
 
 print elements(lambda x: x%3, inf_list(), 1000)
-
 
 {% endhighlight %}
 

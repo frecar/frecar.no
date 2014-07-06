@@ -52,6 +52,9 @@ for x in generator(0,10):
 
 {% highlight py %}
 
+import itertools
+import time
+
 def fibonacci_sequence():
     a = 0
     b = 1
@@ -60,7 +63,26 @@ def fibonacci_sequence():
         yield a
         a, b = a + b, a
 
-for f in fibonacci_sequence():
-    print f
+
+#Convert the generator to a list, get last element, very slow!
+def get_nth_fibonacci_number_sliced(n):
+    return list(itertools.islice(fibonacci_sequence(), n))[-1]
+
+
+#Using enumerate, faster!
+def get_nth_fibonacci_number(n):
+    for index, fib in enumerate(fibonacci_sequence()):
+        if index == n:
+            return fib
+
+t = time.time()
+get_nth_fibonacci_number(500000)
+print time.time() - t
+"Output: 2.75447893143"
+
+t = time.time()
+get_nth_fibonacci_number_sliced(500000)
+print time.time() - t
+"Output: 47.5731070042"
 
 {% endhighlight %}

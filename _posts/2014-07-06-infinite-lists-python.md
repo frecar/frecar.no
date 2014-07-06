@@ -19,6 +19,38 @@ def inf_list(start=0):
 for x in inf_list():
     print x
 
+"prints 0, 1, 2 ..."
+
+
+#More examples using custom operaotrs
+from operator import add, sub
+
+#Using add operator, increasing list
+def inf_list(x=0, op=add):
+    while True:
+        yield x
+        x = op(x, 1)
+
+#Never ending loop..
+for x in inf_list():
+    print x
+
+"prints 0, 1, 2 ..."
+
+
+#Using sub operator, decreaseing list
+def inf_list(x=0, op=sub):
+    while True:
+        yield x
+        x = op(x, 1)
+
+#Never ending loop..
+for x in inf_list():
+    print x
+
+"prints 0, -1, -2..."
+
+
 {% endhighlight %}
 
 

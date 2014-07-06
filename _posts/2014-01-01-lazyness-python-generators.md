@@ -68,6 +68,10 @@ def fibonacci_sequence():
 def get_nth_fibonacci_number_sliced(n):
     return list(itertools.islice(fibonacci_sequence(), n))[-1]
 
+t = time.time()
+get_nth_fibonacci_number_sliced(500000)
+print time.time() - t
+"Output: 47.5731070042"
 
 #Using enumerate, faster!
 def get_nth_fibonacci_number(n):
@@ -80,9 +84,6 @@ get_nth_fibonacci_number(500000)
 print time.time() - t
 "Output: 2.75447893143"
 
-t = time.time()
-get_nth_fibonacci_number_sliced(500000)
-print time.time() - t
-"Output: 47.5731070042"
+
 
 {% endhighlight %}

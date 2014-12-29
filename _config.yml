@@ -1,2 +1,9 @@
-pygments: true
+title: Fredrik Nygård Carlsen
+email: me@frecar.no
+baseurl: ""
+url: "http://frecar.no"
+
 markdown: kramdown
+timezone: Europa/Oslo
+encoding: utf-8
+permalink: /:title/

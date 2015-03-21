@@ -13,7 +13,7 @@ def inf_list(start=0):
         x+=1
         yield x
 
-#Never ending loop..
+#Never ending loop
 for x in inf_list():
     print x
 

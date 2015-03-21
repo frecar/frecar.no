@@ -81,11 +81,9 @@ p {
     font-size: 12px;
 }
 
-
-
 #profile_info #profile img {
     width:100px;
-    height:100px;
+    height:82px;
 }
 
 @media (max-width:770px) {
